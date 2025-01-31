@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Create a new class, define it with size and necessary methods."""
 
+
 class Rectangle:
     """This is a rectangle with width and height parameters."""
 
