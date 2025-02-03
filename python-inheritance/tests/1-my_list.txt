@@ -1,0 +1,23 @@
+>>> my_list = MyList([3, 1, 2])
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+>>> empty_list = MyList([])
+>>> empty_list.print_sorted()
+[]
+
+>>> my_list = MyList([7, 5, 3, 1, 2, 4, 6])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5, 6, 7]
+
+>>> my_list = MyList([-1, -3, -2])
+>>> my_list.print_sorted()
+[-3, -2, -1]
+
+>>> my_list = MyList([10])
+>>> my_list.print_sorted()
+[10]
+
+>>> my_list = MyList([4, 'apple', 2, 'banana'])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
