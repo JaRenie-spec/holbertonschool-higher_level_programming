@@ -1,17 +1,12 @@
 #!/usr/bin/python3
-"""Module defining the Rectangle class, which inherits from BaseGeometry."""
+"""Module defining geometric classes: BaseGeometry, Rectangle, and Square."""
 
 
 class BaseGeometry:
-    """A base class for geometric operations."""
+    """Base Geometry class with validation methods."""
 
     def area(self):
-        """
-        Raises an Exception indicating that the method is not implemented.
-
-        This method should be overridden in a subclass to provide
-        a specific implementation for calculating the area.
-        """
+        """Raises an Exception because it must be implemented in subclasses."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
@@ -26,15 +21,15 @@ class BaseGeometry:
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
-            raise ValueError(f"{name} must be > 0")
+            raise ValueError(f"{name} must be greater than 0")
 
 
 class Rectangle(BaseGeometry):
-    """A class that represents a rectangle, inheriting from BaseGeometry."""
+    """Rectangle class inheriting from BaseGeometry."""
 
     def __init__(self, width, height):
         """
-        Initializes a rectangle with width and height, ensuring validation.
+        Initializes a rectangle with validated width and height.
 
         :param width: The width of the rectangle (must be a positive integer).
         :param height: The height of the rectangle (must be positive integer).
@@ -44,92 +39,28 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.__height = height
 
-    def __str__(self):
-        """
-        Returns a string representation of the rectangle.
-
-        :return: A formatted string with width and height.
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
-
     def area(self):
-        """
-        Computes and returns the area of the rectangle.
-
-        :return: The area (width * height).
-        """
+        """Computes and returns the area of the rectangle."""
         return self.__width * self.__height
 
-    #!/usr/bin/python3
-"""Module defining the Rectangle class, which inherits from BaseGeometry."""
-
-
-class BaseGeometry:
-    """A base class for geometric operations."""
-
-    def area(self):
-        """
-        Raises an Exception indicating that the method is not implemented.
-
-        This method should be overridden in a subclass to provide
-        a specific implementation for calculating the area.
-        """
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        Validates that 'value' is an integer greater than 0.
-
-        :param name: The name of the variable (as a string).
-        :param value: The value to be validated.
-        :raises TypeError: If 'value' is not an integer.
-        :raises ValueError: If 'value' is not greater than 0.
-        """
-        if not isinstance(value, int):
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be > 0")
-
-
-class Rectangle(BaseGeometry):
-    """A class that represents a rectangle, inheriting from BaseGeometry."""
-
-    def __init__(self, width, height):
-        """
-        Initializes a rectangle with width and height, ensuring validation.
-
-        :param width: The width of the rectangle (must be a positive integer).
-        :param height: The height of the rectangle (must be positive integer).
-        """
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-
     def __str__(self):
-        """
-        Returns a string representation of the rectangle.
-
-        :return: A formatted string with width and height.
-        """
+        """Returns a formatted string representation of the rectangle."""
         return f"[Rectangle] {self.__width}/{self.__height}"
 
-    def area(self):
-        """
-        Computes and returns the area of the rectangle.
-
-        :return: The area (width * height).
-        """
-        return self.__width * self.__height
 
 class Square(Rectangle):
+    """Square class inheriting from Rectangle."""
 
     def __init__(self, size):
-        """compute and return the size of the square"""
+        """
+        Initializes a square with a validated size.
 
+        :param size: The side length of the square (must be positive integer).
+        """
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
 
     def area(self):
+        """Computes and returns the area of the square."""
         return self.__size * self.__size
