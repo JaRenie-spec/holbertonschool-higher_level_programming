@@ -4,4 +4,5 @@
 
 
 class BaseGeometry:
+    """an empty Base figure that we will define soon"""
     pass
