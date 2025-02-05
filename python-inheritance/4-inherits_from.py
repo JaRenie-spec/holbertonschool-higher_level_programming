@@ -1,9 +1,8 @@
-#!usr/bin/python3
-
-"""define a function that checks if an object is a subclass inherited
-from a specified class."""
+#!/usr/bin/python3
+'''Mode 4-inherits_from'''
 
 
 def inherits_from(obj, a_class):
-    """Return true if obj is an instance of a class"""
-    return issubclass(int, a_class)
+    """Returns True if obj is an instance of a class that inherited
+    (directly or indirectly) from a_class, otherwise False."""
+    return isinstance(obj, a_class) and type(obj) is not a_class
