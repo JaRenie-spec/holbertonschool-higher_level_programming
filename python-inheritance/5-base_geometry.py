@@ -1,8 +1,8 @@
-#!usr/bin/python3
+#!/usr/bin/python3
+"""create an empty class named BaseGeometry
+"""
 
-""" Create a new class name BaseFeometry"""
 
-
-class BaseGeometry:
-    """an empty Base figure that we will define soon"""
+class BaseGeometry():
+    """empty class"""
     pass
