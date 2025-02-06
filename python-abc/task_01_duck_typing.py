@@ -3,10 +3,12 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     """
     Abstract base class for geometric shapes.
-    It enforces the implementation of the 'area' and 'perimeter' methods in any subclass.
+    It enforces the implementation of the 'area'
+    and 'perimeter' methods in any subclass.
     """
 
     @abstractmethod
@@ -24,6 +26,7 @@ class Shape(ABC):
         Must be implemented by any subclass of Shape.
         """
         pass
+
 
 class Circle(Shape):
     """
@@ -57,6 +60,7 @@ class Circle(Shape):
             float: The perimeter of the circle.
         """
         return 2 * math.pi * self.radius
+
 
 class Rectangle(Shape):
     """
@@ -93,15 +97,18 @@ class Rectangle(Shape):
         """
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """
     Prints the area and perimeter of a shape.
 
-    This function relies on duck typing, meaning it calls the 'area' and 'perimeter' methods
+    This function relies on duck typing, meaning
+    it calls the 'area' and 'perimeter' methods
     on the passed object without checking its type.
 
     Parameters:
-        shape (Shape): An object that follows the Shape interface (i.e., has area and perimeter methods).
+        shape (Shape): An object that follows the Shape interface
+        (i.e., has area and perimeter methods).
     """
     try:
         # Calling area and perimeter methods (duck typing)
