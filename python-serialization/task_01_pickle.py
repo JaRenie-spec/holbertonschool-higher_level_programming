@@ -14,14 +14,8 @@ class CustomObject:
 
     def display(self):
         """displays the attribute of the object"""
-        if not isinstance(self.name, str):
-            raise TypeError
         print("Name:", self.name)
-        if not isinstance(self.age, int):
-            raise TypeError
         print("Age:", self.age)
-        if not isinstance(self.is_student, bool):
-            raise ValueError
         print("Is Student:", self.is_student)
 
     def serialize(self, filename):
