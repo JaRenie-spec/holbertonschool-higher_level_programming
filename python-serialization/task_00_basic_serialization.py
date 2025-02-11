@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 import json
 
-data = {
-    "name": "John Doe",
-    "age": 30,
-    "city": "New York"}
 
 def serialize_and_save_to_file(data, filename):
     # Your code here to serialize and save data to the specified file
