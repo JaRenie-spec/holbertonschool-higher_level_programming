@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """create a class student with instanciation"""
+
+
 class Student:
     """define a class student"""
     def __init__(self, first_name, last_name, age):

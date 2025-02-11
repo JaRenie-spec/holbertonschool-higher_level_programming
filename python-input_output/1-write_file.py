@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""write file"""
+"""write files"""
 
 
 def write_file(filename="", text=""):
