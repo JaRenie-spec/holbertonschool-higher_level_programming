@@ -1,10 +1,9 @@
-#!/usr/bin/ptyhon3
-"""save object to a file"""
-
+#!/usr/bin/python3
+'''Save Object to a file'''
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """function that write an object to a text file"""
-    with open(filename, 'w') as f:
-        json.dump(my_obj, f)
+    '''function that writes an Object to a text file'''
+    with open(filename, "w") as outfile:
+        json.dump(my_obj, outfile)

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""write files"""
+"""write in file because this is cool"""
 
 
 def write_file(filename="", text=""):
-    """function that write a string to a text file (UTF8)"""
-    with open(filename, encoding="utf-8") as file:
+    """write file and com for the checker"""
+    with open(filename, 'w', encoding="utf-8") as file:
         return file.write(text)

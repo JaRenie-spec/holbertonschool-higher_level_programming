@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""class student that defines a student"""
+"""lass Student that defines a student"""
+
 
 class Student:
     """define a class student"""
-
 
     def __init__(self, first_name, last_name, age):
         """instanciation of class attribute"""
@@ -12,10 +12,9 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """retrive dictionary representation of student instance"""
+        """Retrieve dictionary representation of Student instance"""
         if isinstance(attrs, list) and all(
                 isinstance(attr, str) for attr in attrs):
             return {key: self.__dict__[key]
-                for key in attrs if key in self.__dict__}
+                    for key in attrs if key in self.__dict__}
         return self.__dict__
-
