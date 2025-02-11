@@ -8,7 +8,8 @@ def convert_csv_to_json(csv_filename):
     """function reads the CSV file converts its contents to
     a list of dictionaries, and writes the data to a JSON file"""
     try:
-        with open(csv_filename, mode='r', newline='', encoding='utf-8') as csv_file:
+        with open(csv_filename, mode='r', newline='', encoding='utf-8'
+                  )as csv_file:
             reader = csv.DictReader(csv_file)
             data = [row for row in reader]
 
