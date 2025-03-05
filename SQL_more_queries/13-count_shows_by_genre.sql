@@ -1,7 +1,7 @@
--- Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
-SELECT tv_show_genres.genre_id AS genre, COUNT(tv_shows.id) AS number_of_shows
-FROM tv_show_genres
-JOIN tv_shows ON tv_show_genres.show_id = tv_shows.id
-GROUP BY tv_show_genres.genre_id
-HAVING COUNT(tv_shows.id) > 0
-ORDER BY number_of_shows DESC;
+-- Lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each
+SELECT b.name AS genre, count(a.show_id) AS number_of_shows
+FROM tv_show_genres a
+LEFT JOIN tv_genres b
+ON a.genre_id = b.id
+GROUP BY a.genre_id
+ORDER BY 2 DESC;
